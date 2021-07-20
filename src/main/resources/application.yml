@@ -1,4 +1,4 @@
-spring:  application:    name: aws-lambda-connect-rds  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver    url: jdbc:mysql://test-db-instance.ckxpmro3pya5.ap-south-1.rds.amazonaws.com:3306/testdb?createDatabaseIfNotExist=true    username: admin    password: admin2021      jpa:    generate-ddl: true    show-sql: true    properties:      format-sql: true    hibernate:      ddl-auto: update
+spring:  application:    name: aws-lambda-connect-rds  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver    url: ${DB_URL}    username: ${USERNAME}    password: ${PASSWORD}      jpa:    generate-ddl: true    show-sql: true    properties:      format-sql: true    hibernate:      ddl-auto: update
 aws:
   services:
     auto:
